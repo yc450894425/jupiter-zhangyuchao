@@ -7,6 +7,9 @@ public class ExampleJob {
     public boolean remote;
     public ExampleCoordinates coordinates;
 
+    // for Jackson
+    public ExampleJob() {}
+
     public ExampleJob(String title, int salary, String starting, boolean remote, ExampleCoordinates coordinates) {
         this.title = title;
         this.salary = salary;
