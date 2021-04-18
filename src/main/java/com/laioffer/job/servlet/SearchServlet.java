@@ -35,6 +35,10 @@ public class SearchServlet extends HttpServlet {
         double lat = Double.parseDouble(request.getParameter("lat"));
         double lon = Double.parseDouble(request.getParameter("lon"));
 
+        // for test
+//        lat=37.38;
+//        lon=-122.08;
+
         MySQLConnection connection = new MySQLConnection();
         Set<String> favoritedItemIds = connection.getFavoriteItemIds(userId);
         connection.close();

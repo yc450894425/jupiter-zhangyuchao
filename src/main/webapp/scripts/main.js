@@ -25,14 +25,11 @@
         oItemNav = document.getElementById('item-nav'),
         oItemList = document.getElementById('item-list'),
         oTpl = document.getElementById('tpl').innerHTML,
-
         // default data
         userId = '1111',
         userFullName = 'John',
         lng = -122.08,
         lat = 37.38,
-        // lng = -122,
-        // lat = 47,
         itemArr;
 
     // init
@@ -284,8 +281,8 @@
     function initGeo(cb) {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
-                    // lat = position.coords.latitude || lat;
-                    // lng = position.coords.longitude || lng;
+                    lat = position.coords.latitude || lat;
+                    lng = position.coords.longitude || lng;
                     cb();
                 },
                 function () {
